@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="Contact.css">
+</head>
+<body>
+<header>
+  <nav>
+    <img id="logo" src="/Img/logo.png" alt="Logo">
+    <ul class="menu">
+      <li><a href="/"><span class="highlight">Inicio</span></a></li>
+      <li><a href="/valores">Valores</a></li>
+      <li><a href="/skills">Habilidades</a></li>
+      <li><a href="/proyectos">Proyectos</a></li>
+      <li><a href="/contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  
+
+  <fieldset>
+      <h1>Contactame</h1>
+
+    <form action="https://formspree.io/f/xjvjlqzj" method="POST">
+      <label for="name">Nombre:</label>
+      <input placeholder="Ingrese su nombre" type="text" id="name" name="name" required>
+
+       <label for="surname">Apellido:</label>
+      <input placeholder="Ingrese su apellido" type="text" id="surname" name="surname" required>
+
+      <label for="email">Email:</label>
+      <input placeholder="Ingrese su correo electronico" type="email" id="email" name="email" required>
+
+      <label for="message">Mensaje:</label>
+      <textarea placeholder="Contenido" id="message" name="message" rows="4" required></textarea>
+
+      <input id="button" type="submit" value="Enviar">
+    </form>
+  </fieldset>
+</main>
+
+<script>
+  const links = document.querySelectorAll("nav a");
+
+  links.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault(); 
+      const href = this.getAttribute("href");
+
+      document.body.classList.add("fade-out");
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 500); 
+    });
+  });
+</script>
+
+</body>
+</html>

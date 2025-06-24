@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Proyectos</title>
+    <link rel="stylesheet" href="Projects.css" />
+</head>
+<body>
+<header>
+  <nav>
+    <img id="logo" src="/Img/logo.png" alt="Logo">
+    <ul class="menu">
+      <li><a href="/"><span class="highlight">Inicio</span></a></li>
+      <li><a href="/valores">Valores</a></li>
+      <li><a href="/skills">Habilidades</a></li>
+      <li><a href="/proyectos">Proyectos</a></li>
+      <li><a href="/contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1 class="titulo">Proyectos Realizados</h1>
+  <div class="cards-container">
+
+    <div class="card">
+      <img src="/Img/jtag.png" alt="J Tag Events" />
+      <h2>J Tag Events</h2>
+      <p>HTML, CSS, JavaScript<br>
+        Desarrollo completo de una página web para una empresa de organización de eventos. Incluye secciones informativas, catálogo de servicios (sonido, iluminación, efectos especiales) y contacto. Enfocado en diseño responsive, estructura semántica y navegación intuitiva.</p>
+      <a href="https://j-tag-events.vercel.app/" class="btn-demo" target="_blank" rel="noopener noreferrer">Ver Demo</a>
+    </div>
+
+    <div class="card">
+      <img src="/Img/autogleam.png" alt="Auto Gleam" />
+      <h2>Auto Gleam</h2>
+      <p>Angular, TypeScript<br>
+        Aplicación web tipo SPA desarrollada como proyecto final del curso de Angular. Permite gestionar servicios de lavado de autos con autenticación por roles (Admin, Empleado, Cliente), agendamiento de citas, visualización de reportes y diseño UI/UX enfocado en la experiencia del usuario. 100% front-end.</p>
+      <a href="https://autogleam.vercel.app/" class="btn-demo" target="_blank" rel="noopener noreferrer">Ver Demo</a>
+    </div>
+
+    <div class="card">
+      <img src="/Img/portfolio.png" alt="Portfolio" />
+      <h2>Portfolio</h2>
+      <p>React.js, Tailwind CSS<br>
+        Sitio web moderno y personal en proceso de desarrollo. Presenta mis habilidades, proyectos y trayectoria como desarrollador front-end. Implementado con React y estilizado con Tailwind para lograr un diseño limpio, responsive y adaptable a futuras secciones dinámicas.</p>
+      <a href="https://emilechavarria.vercel.app/" class="btn-demo" target="_blank" rel="noopener noreferrer">Ver Demo</a>
+    </div>
+
+    <div class="card">
+      <img src="/Img/stockify.png" alt="Stockify" />
+      <h2>Stockify</h2>
+      <p>C#, .NET (Windows Forms), MySQL<br>
+        Aplicación de escritorio enfocada en la gestión de inventarios, ventas y facturación. Permite registrar productos, controlar existencias, generar facturas en PDF y realizar consultas mediante reportes de ventas. Integra procedimientos almacenados en MySQL para mayor eficiencia y control de datos.</p>
+      <a href="https://github.com/EmilEchavarria/Stockify" class="btn-demo" target="_blank" rel="noopener noreferrer">Ver Demo</a>
+    </div>
+
+    <div class="card">
+      <img src="/Img/porfoliobasic.png" alt="Portfolio Personal" />
+      <h2>Portfolio Personal</h2>
+      <p>HTML, CSS, JavaScript<br>
+        Primera versión de mi portafolio web, con estructura básica pero funcional. Presenta mis primeros proyectos, habilidades iniciales y enlaces de contacto. Ideal para mostrar la evolución de mi aprendizaje en desarrollo web desde sus etapas más tempranas.</p>
+      <a href="https://github.com/EmilEchavarria/Portfolio-Homework-1" class="btn-demo" target="_blank" rel="noopener noreferrer">Ver Demo</a>
+    </div>
+
+    <div class="card">
+      <img src="/Img/electronic.png" alt="Agenda Electrónica" />
+      <h2>Agenda Electrónica</h2>
+      <p>C#, .NET Framework (Windows Forms)<br>
+        Aplicación de escritorio orientada a la gestión de contactos. Permite realizar operaciones CRUD sobre una base de datos local, ideal para registrar y organizar clientes. Utiliza formularios de Windows con una interfaz sencilla y funcional para tareas administrativas básicas.</p>
+      <a href="https://github.com/EmilEchavarria/Electronic-Organizer?tab=readme-ov-file " class="btn-demo" target="_blank" rel="noopener noreferrer">Ver Demo</a>
+    </div>
+
+  </div>
+</main>
+
+
+
+<script>
+  const links = document.querySelectorAll("nav a");
+
+  links.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const href = this.getAttribute("href");
+
+      document.body.classList.add("fade-out");
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 500);
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+<header>
+  <nav>
+    <img id="logo" src="/Img/logo.png" alt="Logo">
+    <ul class="menu">
+      <li><a href="/"><span class="highlight">Inicio</span></a></li>
+      <li><a href="/valores">Valores</a></li>
+      <li><a href="/skills">Habilidades</a></li>
+      <li><a href="/proyectos">Proyectos</a></li>
+      <li><a href="/contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+<div class="main-wrapper">
+<main>
+  <div class="content-wrapper">
+    <div class="left">
+      <img src="/Img/photo.jpeg" alt="Placeholder Image">
+    </div>
+    <div class="right">
+      <h1>Emil Echavarría</h1>
+      <h2>Desarrollador de Software</h2>
+      <p>
+  💻 Soy <span class="highlight">Emil Echavarría</span>, tengo 19 años y soy <span class="highlight">desarrollador de software júnior</span>. 
+  Si bien mi enfoque abarca diversas áreas de la programación, mi verdadera pasión es el desarrollo front-end, donde disfruto creando 
+  experiencias interactivas y visualmente atractivas. <br><br>
+  Me encanta explorar <span class="highlight">nuevas tecnologías</span> y aprender constantemente, lo que me permite mejorar mis habilidades 
+  y abordar los proyectos con una perspectiva más integral del proceso de desarrollo de software.<br><br>
+  Siempre busco <span class="highlight">nuevos retos</span> que me permitan crecer profesionalmente, colaborar en proyectos que tengan un 
+  impacto positivo en la tecnología y mantenerme a la vanguardia de las tendencias que definen el futuro del desarrollo. 🚀
+</p>
+
+    </div>
+  </div>
+</main>
+
+</div>
+
+<script>
+  const links = document.querySelectorAll("nav a");
+
+  links.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault(); 
+      const href = this.getAttribute("href");
+
+      document.body.classList.add("fade-out");
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 500); 
+    });
+  });
+</script>
+
+</body>
+</html>
