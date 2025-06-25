@@ -19,24 +19,28 @@ export const router = (req, res) => {
     });
   };
 
-  switch (req.url) {
-    case '/':
-      render('home.html');
-      break;
-    case '/valores':
-      render('valores.html');
-      break;
-    case '/skills':
-      render('skills.html');
-      break;
-    case '/proyectos':
-      render('projects.html');
-      break;
-    case '/contacto':
-      render('contact.html');
-      break;
-    default:
-      res.writeHead(404);
-      res.end('Página no encontrada');
-  }
+switch (req.url) {
+  case '/':
+    render('home.html');
+    break;
+  case '/values':
+    render('values.html');  // ✅ correcto
+    break;
+  case '/skills':
+    render('skills.html');  // ✅ si está en carpeta
+    break;
+  case '/projects':
+    render('projects.html');  // ✅ si está en carpeta
+    break;
+  case '/contact':
+    render('contact.html');  // ✅ si está en carpeta
+    break;case '/test':
+  render('projects.html');  // 👈 prueba directa
+  break;
+
+  default:
+    res.writeHead(404);
+    res.end('Página no encontrada');
+}
+
 };

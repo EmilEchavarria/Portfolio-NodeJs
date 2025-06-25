@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mis Valores Personales</title>
+  <link rel="stylesheet" href="/css/values.css" />
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="/"><img src="/icons/logo.png" alt="Logo Emil" /></a>
+    </div>
+    <ul class="menu">
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/values" class="active">Valores</a></li>
+      <li><a href="/skills">Habilidades</a></li>
+      <li><a href="/projects">Proyectos</a></li>
+      <li><a href="/contact">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="valores-container">
+  <h1>Mis Valores Personales</h1>
+  <p class="intro">Los siguientes valores son los pilares que guían mi ética profesional y personal como desarrollador.</p>
+
+  <section class="valores-grid">
+    <article class="valor">
+      <h2>1. Compromiso</h2>
+      <p>Me esfuerzo al máximo para cumplir mis objetivos, entregando resultados de calidad con responsabilidad.</p>
+    </article>
+
+    <article class="valor">
+      <h2>2. Integridad</h2>
+      <p>Actúo con honestidad, respeto y transparencia en todas las etapas de un proyecto o colaboración.</p>
+    </article>
+
+    <article class="valor">
+      <h2>3. Respeto</h2>
+      <p>Valoro las ideas, culturas y pensamientos distintos. El respeto es la base de todo trabajo en equipo.</p>
+    </article>
+
+    <article class="valor">
+      <h2>4. Innovación</h2>
+      <p>Me encanta aprender tecnologías nuevas y experimentar soluciones creativas a problemas reales.</p>
+    </article>
+
+    <article class="valor">
+      <h2>5. Colaboración</h2>
+      <p>Creo en el poder del trabajo en equipo para construir soluciones sólidas y sostenibles.</p>
+    </article>
+
+    <article class="valor">
+      <h2>6. Empatía</h2>
+      <p>Escucho con atención y considero las necesidades de los usuarios, compañeros y clientes.</p>
+    </article>
+
+    <article class="valor">
+      <h2>7. Disciplina</h2>
+      <p>Mantengo hábitos de trabajo organizados y soy constante en mi crecimiento profesional.</p>
+    </article>
+
+    <article class="valor">
+      <h2>8. Pasión</h2>
+      <p>Me entusiasma la tecnología. Disfruto cada línea de código y cada desafío como una oportunidad.</p>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Emil Echavarría · Portafolio Web · Todos los derechos reservados.</p>
+</footer>
+
+<script>
+  document.querySelectorAll(".menu a").forEach(link => {
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+      document.body.classList.add("fade-out");
+      const href = this.getAttribute("href");
+      setTimeout(() => (window.location.href = href), 400);
+    });
+  });
+</script>
+</body>
+</html>

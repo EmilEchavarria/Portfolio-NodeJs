@@ -1,0 +1,143 @@
+/* Reset y tipografía */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #101224;
+  color: #ffffff;
+  line-height: 1.7;
+  transition: all 0.3s ease;
+}
+
+/* Cabecera y navegación */
+header {
+  background-color: #181b3a;
+  padding: 15px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.navbar img {
+  height: 48px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover,
+.menu li a.active {
+  color: #4fa3f7;
+}
+
+/* Contenido principal */
+.valores-container {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 30px 20px;
+}
+
+.valores-container h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #4fa3f7;
+}
+
+.valores-container .intro {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #cccccc;
+}
+
+/* Valores en grilla */
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.valor {
+  background: #1d1f3b;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease;
+}
+
+.valor:hover {
+  transform: translateY(-5px);
+}
+
+.valor h2 {
+  color: #8a7cf6;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0c0e22;
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* Animación para transición */
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .valores-container h1 {
+    font-size: 2rem;
+  }
+
+  .valor h2 {
+    font-size: 1rem;
+  }
+}
